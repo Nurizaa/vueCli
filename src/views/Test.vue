@@ -5,6 +5,7 @@
             <h2>{{item.FileName}}</h2>
             <h2>{{item.Descr}}</h2>
             <video width="450" controls :src="item.Path"></video>
+            <hr>
         </div>
     </div>
 </template>
