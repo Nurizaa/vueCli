@@ -1,7 +1,10 @@
 <template>
-    <div class="about">
-        <h1>{{info}}</h1>
+    <div >
+        <h1 v-for="item in info.data">{{item.ID}}</h1>
     </div>
+    <!--<p>-->
+        <!--{{info}}-->
+    <!--</p>-->
 </template>
 
 <script>
@@ -15,7 +18,7 @@
         },
         mounted() {
             axios
-                .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                .get('http://ctmax.d-oracle.com/videos/')
                 .then(response => (this.info = response));
         }
     };
