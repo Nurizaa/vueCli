@@ -1,14 +1,17 @@
 <template>
-    <div >
-        <h1 v-for="item in info.data">{{item.ID}}</h1>
+    <div>
+        <div v-for="item in info.data">
+            <h1>{{item.ID}}</h1>
+            <h2>{{item.FileName}}</h2>
+            <h2>{{item.Descr}}</h2>
+            <video width="450" controls :src="item.Path"></video>
+        </div>
     </div>
-    <!--<p>-->
-        <!--{{info}}-->
-    <!--</p>-->
 </template>
 
 <script>
     import axios from 'axios'
+
     export default {
         el: '#test',
         data() {
